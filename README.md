@@ -1,1 +1,1 @@
-BITS India
+BITS India - Business & IT Solutions
