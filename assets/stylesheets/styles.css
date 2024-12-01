@@ -3533,3 +3533,72 @@ canvas{
 .footer-menu li a:hover {
   color: #000000;
 }
+
+/* Hi */
+
+.portfolio-wrap {
+  position: relative;
+}
+
+.portfolio-image {
+  position: relative;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* Modal Layout */
+.modal-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.modal-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.modal-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Modal Layout */
+.modal-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.modal-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.modal-image img {
+  width: 100%;
+  height: auto;
+}

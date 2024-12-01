@@ -93,8 +93,76 @@
 
   <main id="main">
 
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="portfolioModalLabel">App Design</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex">
+            <!-- Image on the Left -->
+            <div class="modal-image">
+              <img src="assets/images/portfolio/product-1.jpg" class="img-fluid" alt="Portfolio Image">
+            </div>
+            <!-- Text on the Right -->
+            <div class="modal-text ms-4">
+              <h4>Project Overview</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+              <h5>Details:</h5>
+              <ul>
+                <li>Platform: iOS</li>
+                <li>Technology: React Native</li>
+                <li>Client: XYZ Corp</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <div class="single-page">
       <!-- Portfolio Section -->
+
+      <section id="portfolio" class="portfolio">
+        <div class="container" data-aos="fade-up">
+          <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <ul class="portfolio-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-app">App Design</li>
+                <li data-filter=".filter-product">App Development</li>
+                <li data-filter=".filter-branding">Branding</li>
+                <li data-filter=".filter-books">IT Solutions</li>
+              </ul><!-- End Portfolio Filters -->
+            </div>
+      
+            <div class="row gy-4 portfolio-container">
+              <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                  <!-- Portfolio Image with Text Overlay -->
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                    <div class="portfolio-image">
+                      <img src="assets/images/portfolio/product-1.jpg" class="img-fluid" alt="">
+                      <div class="portfolio-text">
+                        <h5>App Design</h5>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div><!-- End Portfolio Item -->
+              <!-- Add more portfolio items here with similar structure -->
+      
+            </div><!-- End Portfolio Container -->
+          </div>
+        </div>
+      </section>
+      
+
     <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
         <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
