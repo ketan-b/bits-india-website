@@ -478,6 +478,136 @@ img:hover {
 
 section {background: var(--light-color);}
 
+.small-container{
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* Single Product */
+.single-product .col-2 img{
+  padding: 0;
+}
+.single-product .col-2{
+  padding: 20px;
+}
+.single-product h4{
+  margin: 20px 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.single-product select {
+  width: 150px;
+  height: 40px;
+  padding: 5px 10px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #444;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.single-product select:hover {
+  border-color: #ff4500;
+}
+
+.single-product select:focus {
+  outline: none;
+  border-color: #ff4500;
+  background-color: #fff;
+}
+
+.single-product input[type="number"] {
+  width: 60px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.single-product input[type="number"]:hover,
+.single-product input[type="number"]:focus {
+  border-color: #ff4500;
+  background-color: #fff;
+  outline: none;
+}
+
+/* .single-product select{
+  display: block;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.single-product input{
+  width: 50px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 20px;
+  margin-left: 10px;
+  border: 1px solid #ff523b;
+  margin-right: 10px;
+} */
+.single-product .fa{
+  color: #ff523b;
+  margin-left: 10px;
+}
+.small-img-row{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.small-img-col{
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
+.single-product .btn {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff4500;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-content: center;
+  margin: 10px 0 10px 0;
+}
+
+.single-product .btn:hover {
+  background-color: #e63e00;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Media query for 600 screen size */
+@media only screen and (max-width: 600px){
+
+  .single-product .row{
+      text-align: left;
+  }
+  .single-product .col-6{
+      padding: 20px 0;
+  }
+  .single-product h1{
+      font-size: 26px;
+      line-height: 32px;
+  }
+}
 /*--------------------------------------------------------------
 # Desktop Navigation
 --------------------------------------------------------------*/
