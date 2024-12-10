@@ -586,12 +586,18 @@ section {background: var(--light-color);}
   cursor: pointer;
   transition: all 0.3s ease;
   align-content: center;
-  margin: 10px 0 10px 0;
+  margin: 0 0 15px 0;
 }
 
 .single-product .btn:hover {
   background-color: #e63e00;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+}
+
+.single-product li{
+  list-style-type: disc;
+  color: #ff523b;
+  margin-left: 12px;
 }
 
 /* Media query for 600 screen size */

@@ -95,7 +95,7 @@
 
     <div class="single-page">
 
-         <section>
+         <section style="padding: 0;">
             <!-- Single Products -->
     <div class="small-container single-product section">
         <div class="row">
@@ -132,13 +132,21 @@
                 <input type="number" value="1" min="0" > -->
                 <p>Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of
                     shorts for your morning workout or a denims for an evening out with the guys.</p>
-                    <br>
+                 
                 <a href="" class="btn">Add To Cart</a>
-
                 <h3>Product Details <i class="bi bi-text-indent-left"></i></h3>
-                <br>
+
                 <p>Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of
-                    shorts for your morning workout or a denims for an evening out with the guys.</p>
+                    shorts for your morning workout or a denims for an evening out with the guys.
+                    <ul>
+                        <li>Red printed T-shirt</li>
+                        <li>has a round neck</li>
+                        <li>short sleeves</li>
+                        <li>Material: 60% cotton, 40% polyester</li>
+                        <li>Machine Wash</li>
+                    </ul>
+
+                </p>
             </div>
         </div>
     </div>
@@ -350,6 +358,18 @@
     SmallImg[3].onclick = function () {
         ProductImg.src = SmallImg[3].src;
     }
+
+    var i = 0;
+
+    function autoSlide() {
+        ProductImg.src = SmallImg[i].src;
+        i++;
+        if (i >= SmallImg.length) {
+            i = 0;
+        }
+    }
+
+    setInterval(autoSlide, 3000);
 
 </script>
 
