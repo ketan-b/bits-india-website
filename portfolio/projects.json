@@ -1,0 +1,16 @@
+[
+    {
+      "project_name": "Face Recognition for Attendance",
+      "description": "A cutting-edge face recognition system designed to simplify and automate attendance tracking with unparalleled accuracy and efficiency.",
+      "details": "This project leverages advanced facial recognition algorithms to streamline the attendance process for schools, workplaces, and events. It ensures secure, contactless, and accurate attendance management, eliminating manual errors and saving time.",
+      "pointers": [
+        "Contactless attendance tracking for enhanced safety",
+        "High accuracy using advanced facial recognition algorithms",
+        "Integrates seamlessly with existing HR and attendance systems",
+        "Real-time attendance monitoring and reporting",
+        "Secure data storage with end-to-end encryption",
+        "Scalable for small to large organizations"
+      ],
+      "image_folder": "face-recognition-attendance"
+    }
+  ]  
