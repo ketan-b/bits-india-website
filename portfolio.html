@@ -35,6 +35,22 @@
 
 <body>
 
+<style>
+
+.filter{
+  display: none;
+}
+
+.filter:target{
+  display: block;
+}
+
+.por:not(:has(:target)) .filter{
+  display: block;
+}
+
+</style>
+
   <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
@@ -125,95 +141,57 @@
     </div>
 
 
-    <div class="single-page">
-      <!-- Portfolio Section -->
-
-      <section id="portfolio" class="portfolio">
-        <div class="container" data-aos="fade-up">
-          <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
-            <div>
-              <ul class="portfolio-flters">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-app">App Design</li>
-                <li data-filter=".filter-product">App Development</li>
-                <li data-filter=".filter-branding">Branding</li>
-                <li data-filter=".filter-books">IT Solutions</li>
-              </ul><!-- End Portfolio Filters -->
-            </div>
-      
-            <div class="row gy-4 portfolio-container">
-              <div class="col-xl-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <!-- Portfolio Image with Text Overlay -->
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                    <div class="portfolio-image">
-                      <img src="assets/images/portfolio/product-1.jpg" class="img-fluid" alt="">
-                      <div class="portfolio-text">
-                        <h5>App Design</h5>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div><!-- End Portfolio Item -->
-              <!-- Add more portfolio items here with similar structure -->
-      
-            </div><!-- End Portfolio Container -->
-          </div>
-        </div>
-      </section>
-      
+    <div class="single-page">      
 
     <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
         <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
           <div>
             <ul class="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App Design</li>
-              <li data-filter=".filter-product">App Development</li>
-              <li data-filter=".filter-branding">Branding</li>
-              <li data-filter=".filter-books">It Solutions</li>
-            </ul><!-- End Portfolio Filters -->
+              <li><a href="#all" class="filter-active">All</a></li>
+              <li><a href="#application-design">Application Design</a></li>
+              <li><a href="#web-designing">Web Designing</a></li>
+              <li><a href="#surveillance-solutions">Surveillance Solutions</a></li>
+              <li><a href="#ai-solutions">AI Solutions</a></li>
+              <li><a href="#cybersecurity-solutions">Cybersecurity Solutions</a></li>
+              <li><a href="#iot-smart-systems">IoT and Smart Systems</a></li>
+              <li><a href="#ui-ux-designs">UI/UX Designs</a></li>
+            </ul>
           </div>
 
-          <div class="row gy-4 portfolio-container">
 
-            <div class="col-xl-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="assets/images/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/images/portfolio/product-1.jpg" class="img-fluid" alt=""></a>
+          <div class="por">
+            <div class="filter" id="application-design">
+              <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                  <a href="assets/images/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/images/portfolio/product-1.jpg" class="img-fluid" alt=""></a>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
+    
+              <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                  <a href="assets/images/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/images/portfolio/product-1.jpg" class="img-fluid" alt=""></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="filter" id="web-designing">
+              <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                  <a href="assets/images/portfolio/product-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/images/portfolio/product-2.jpg" class="img-fluid" alt=""></a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="filter" id="surveillance-solutions">
+              <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                  <a href="assets/images/portfolio/product-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/images/portfolio/product-3.jpg" class="img-fluid" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <div class="col-xl-4 col-md-6 portfolio-item filter-product">
-              <div class="portfolio-wrap">
-                <a href="assets/images/portfolio/product-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/images/portfolio/product-2.jpg" class="img-fluid" alt=""></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
-              <div class="portfolio-wrap">
-                <a href="assets/images/portfolio/product-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/images/portfolio/product-3.jpg" class="img-fluid" alt=""></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-4 col-md-6 portfolio-item filter-books">
-              <div class="portfolio-wrap">
-                <a href="assets/images/portfolio/product-4.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/images/portfolio/product-4.jpg" class="img-fluid" alt=""></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="assets/images/portfolio/product-5.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/images/portfolio/product-5.jpg" class="img-fluid" alt=""></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
-              <div class="portfolio-wrap">
-                <a href="assets/images/portfolio/product-6.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/images/portfolio/product-6.jpg" class="img-fluid" alt=""></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-          </div><!-- End Portfolio Container -->
 
         </div>
 
@@ -349,6 +327,34 @@
   <!-- Template Main JS File -->
   <script src="assets/javascripts/main.js"></script>
 
-
+  <!-- <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Get the URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const filter = urlParams.get('filter') || 'all'; // Default to 'all'
+  
+    // Set active filter
+    const filters = document.querySelectorAll('.portfolio-flters li a');
+    filters.forEach(link => {
+      const linkFilter = link.getAttribute('href').split('filter=')[1];
+      if (linkFilter === filter) {
+        link.parentElement.classList.add('filter-active');
+      } else {
+        link.parentElement.classList.remove('filter-active');
+      }
+    });
+  
+    // Apply filtering
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    portfolioItems.forEach(item => {
+      if (filter === 'all' || item.classList.contains(`filter-${filter}`)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+</script>
+   -->
 
 </body></html>
