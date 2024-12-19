@@ -1,52 +1,33 @@
 [
     {
-        "blog_title": "The Importance of Surveillance Solutions for Businesses",
-        "author_name": "Admin",
-        "date": "2024-12-07",
-        "blog_intro": "Learn how modern surveillance systems protect, monitor, and enhance your business operations.",
-        "blog_image": "blog-images/High Res.png",
-        "blog_pointers": [
-            {
-                "title": "Crime Deterrence",
-                "content": "Surveillance cameras act as a powerful deterrent against criminal activity. Their presence reduces the risk of theft, vandalism, and other crimes."
-            },
-            {
-                "title": "Protecting Employees and Customers",
-                "content": "Monitoring public spaces such as entrances and parking lots ensures the safety of employees and customers."
-            },
-            {
-                "title": "Real-Time Monitoring and Remote Access",
-                "content": "Modern systems allow business owners to monitor premises in real time from anywhere, ensuring smooth workflows."
-            },
-            {
-                "title": "Evidence Collection",
-                "content": "Surveillance footage provides critical evidence for resolving disputes or addressing incidents."
-            },
-            {
-                "title": "Enhancing Operational Efficiency",
-                "content": "Businesses can monitor workflow and identify inefficiencies using surveillance data."
-            }
-        ]
+      "file_name": "surveillance-solutions",
+      "title": "The Importance of Surveillance Solutions for Businesses",
+      "description": "Learn how modern surveillance systems protect, monitor, and enhance your business operations.",
+      "image_path": "../assets/images/blog/blog-3.jpg",
+      "author": "Admin",
+      "date": "2024-12-12",
+      "keywords": "CCTV, Surveillance",
+      "content": "<p>Security is the backbone of any successful business. With increasing threats ranging from theft to data breaches...</p><h3>1. Crime Deterrence</h3><p>The presence of surveillance cameras is often enough...</p>"
     },
     {
-        "blog_title": "AI-Driven Innovations in Maritime Monitoring",
-        "author_name": "John Doe",
-        "date": "2024-11-15",
-        "blog_intro": "Explore how AI technology is revolutionizing maritime monitoring and ensuring safety at sea.",
-        "blog_image": "../assets/images/blog/blog-4.jpg",
-        "blog_pointers": [
-            {
-                "title": "Automating Risk Detection",
-                "content": "AI systems can detect anomalies and potential threats in real-time, reducing human error."
-            },
-            {
-                "title": "Improving Data Analysis",
-                "content": "AI helps process vast amounts of maritime data for actionable insights."
-            },
-            {
-                "title": "Enhancing Vessel Tracking",
-                "content": "With AI-powered tools, monitoring vessel movements becomes more efficient and precise."
-            }
-        ]
+      "file_name": "ai-solutions",
+      "title": "How AI Solutions are Transforming Businesses",
+      "description": "Explore the ways Artificial Intelligence is revolutionizing business efficiency and innovation.",
+      "image_path": "../assets/images/blog/blog-2.jpg",
+      "author": "Admin",
+      "date": "2024-12-13",
+      "keywords": "AI, Artificial Intelligence",
+      "content": "<p>Artificial Intelligence (AI) has emerged as a game-changer for businesses...</p><h3>1. Automating Repetitive Tasks</h3><p>Businesses save time and resources by automating mundane tasks...</p>"
+    },
+    {
+      "file_name": "iot-smart-systems",
+      "title": "The Role of IoT in Building Smart Systems",
+      "description": "Understand how IoT technology is enabling smarter, more connected business ecosystems.",
+      "image_path": "../assets/images/blog/blog-4.jpg",
+      "author": "Admin",
+      "date": "2024-12-14",
+      "keywords": "IOT, Surveillance",
+      "content": "<p>The Internet of Things (IoT) is reshaping industries by connecting devices...</p><h3>1. Enhanced Efficiency</h3><p>IoT systems gather real-time data to improve operational efficiency...</p>"
     }
-]
+  ]
+  

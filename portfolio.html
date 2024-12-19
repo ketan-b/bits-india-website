@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-<html lang="zxx">
+<!DOCTYPE html>
+<html lang="en">
   <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -8,7 +8,6 @@
   <meta content="" name="Technoit - IT Solutions & Business Services Multipurpose Responsive Website Template">
   <meta name="description" content="Technoit - IT Solutions & Business Services Multipurpose Responsive Website Template">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta content="" name="ZRTHEMES">
 
   <!-- Favicons -->
   <link href="assets/images/favicon.png" rel="icon">
@@ -36,57 +35,119 @@
 <body>
 
 <style>
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Spacing between items */
+    padding: 20px;
+  }
 
-.filter{
-  display: none;
+  .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .portfolio-wrap {
+    position: relative;
+    text-align: center;
+  }
+
+  .portfolio-wrap img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .portfolio-info {
+    padding: 10px;
+  }
+
+  .portfolio-info h3 {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+  }
+
+  .portfolio-info p {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 5px 0 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .portfolio-container {
+      grid-template-columns: 1fr; /* Single column on mobile */
+    }
+  }
+
+    /* Default styling for filter links */
+.portfolio-flters a {
+  color: white; /* Make text white */
+  text-decoration: none; /* Remove underline */
+  padding: 5px 10px; /* Add some padding for better aesthetics */
+  border-radius: 5px; /* Optional rounded corners */
 }
 
-.filter:target{
-  display: block;
+/* Highlight the active filter link */
+.portfolio-flters a.filter-active {
+  /* background-color: #007bff; Highlight background */
+  color: white; /* Ensure active link text remains white */
 }
 
-.por:not(:has(:target)) .filter{
-  display: block;
+/* Hover effect for better UX */
+.portfolio-flters a:hover {
+  /* background-color: #555; Slightly darker background on hover */
+  color: white; /* Keep text white on hover */
 }
 
 </style>
 
-  <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/images/Logo-new.png" alt="logo">
-      </a>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="index.html" class="">Home</a></li>
-          <li><a href="services.html" class="">Services</a></li>
-          <li><a href="portfolio.html" class="">Portfolio</a></li>
-          <li><a href="testimonials.html" class="">Testimonials</a></li>
-          <!-- <li><a href="team.html" class="">Team</a></li> -->
-          <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="packages.html">Pricing</a></li>
-              <li><a href="faqs.html">FAQs</a></li>
-              <!-- <li><a href="privacy-policy.html">Terms &amp; Conditions</a></li> -->
-              <li><a href="privacy-policy.html">Privacy Policy</a></li>
-              <li><a href="blogs.html">Blogs</a></li>
-              <!-- <li><a href="blog-details.html">Blog Detail Page</a></li> -->
-            </ul>
-          </li>
-          <li><a href="blogs.html">News</a></li>
-        </ul>
-      </nav><!-- .navbar -->
-      <a href="contact.html" class="btn-get-started hide-on-mobile">Get Quotes</a>
-      <button id="darkmode-button"><i class="bi bi-moon-fill"></i></button>
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-    </div>
-  </header>
-  <!-- End Header -->
 
-  <!--  Breadcrumbs  -->
-  <div class="breadcrumbs">
+
+    <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/images/Logo-new.png" alt="logo">
+          </a>
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a href="index.html" class="">Home</a></li>
+              <li><a href="services.html" class="">Services</a></li>
+              <li><a href="portfolio.html" class="">Portfolio</a></li>
+              <li><a href="testimonials.html" class="">Testimonials</a></li>
+              <!-- <li><a href="team.html" class="">Team</a></li> -->
+              <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="packages.html">Pricing</a></li>
+                  <li><a href="faqs.html">FAQs</a></li>
+                  <!-- <li><a href="privacy-policy.html">Terms &amp; Conditions</a></li> -->
+                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                  <li><a href="blogs.html">Blogs</a></li>
+                  <!-- <li><a href="blog-details.html">Blog Detail Page</a></li> -->
+                </ul>
+              </li>
+              <li><a href="blogs.html">News</a></li>
+            </ul>
+          </nav><!-- .navbar -->
+          <a href="contact.html" class="btn-get-started hide-on-mobile">Get Quotes</a>
+          <button id="darkmode-button"><i class="bi bi-moon-fill"></i></button>
+          <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+          <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        </div>
+      </header>
+
+        <div class="breadcrumbs">
     <div class="page-header d-flex align-items-center">
       <div class="container position-relative">
         <div class="row d-flex justify-content-center">
@@ -109,207 +170,264 @@
 
   <main id="main">
 
-
-    
-    <!-- Modal -->
-    <div class="modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="portfolioModalLabel">App Design</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body d-flex">
-            <!-- Image on the Left -->
-            <div class="modal-image">
-              <img src="assets/images/portfolio/product-1.jpg" class="img-fluid" alt="Portfolio Image">
-            </div>
-            <!-- Text on the Right -->
-            <div class="modal-text ms-4">
-              <h4>Project Overview</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-              <h5>Details:</h5>
-              <ul>
-                <li>Platform: iOS</li>
-                <li>Technology: React Native</li>
-                <li>Client: XYZ Corp</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="single-page">      
-
+    <div class="single-page">
+      <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
         <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
           <div>
             <ul class="portfolio-flters">
-              <li><a href="#all" class="filter-active">All</a></li>
-              <li><a href="#application-design">Application Design</a></li>
-              <li><a href="#web-designing">Web Designing</a></li>
-              <li><a href="#surveillance-solutions">Surveillance Solutions</a></li>
-              <li><a href="#ai-solutions">AI Solutions</a></li>
-              <li><a href="#cybersecurity-solutions">Cybersecurity Solutions</a></li>
-              <li><a href="#iot-smart-systems">IoT and Smart Systems</a></li>
-              <li><a href="#ui-ux-designs">UI/UX Designs</a></li>
+              <li><a href="portfolio.html?filter=all" class="filter-active">All</a></li>
+              <li><a href="portfolio.html?filter=application-design">Application Design</a></li>
+              <li><a href="portfolio.html?filter=web-designing">Web Designing</a></li>
+              <li><a href="portfolio.html?filter=surveillance-solutions">Surveillance Solutions</a></li>
+              <li><a href="portfolio.html?filter=ai-solutions">AI Solutions</a></li>
+              <li><a href="portfolio.html?filter=cybersecurity-solutions">Cybersecurity Solutions</a></li>
+              <li><a href="portfolio.html?filter=iot-and-smart-systems">IoT and Smart Systems</a></li>
+              <li><a href="portfolio.html?filter=ui-ux-designs">UI/UX Designs</a></li>
             </ul>
+            
           </div>
 
+          <div class="portfolio-container">
 
-          <div class="por">
-            <div class="filter" id="application-design">
-              <div class="col-xl-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <a href="assets/images/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/images/portfolio/product-1.jpg" class="img-fluid" alt=""></a>
-                </div>
-              </div>
-    
-              <div class="col-xl-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <a href="assets/images/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/images/portfolio/product-1.jpg" class="img-fluid" alt=""></a>
-                </div>
-              </div>
+          
+
+        <div class="portfolio-item ai-solutions">
+        <div class="portfolio-wrap">
+            <a href="portfolio/face-recognition/resized/Screenshot 2024-12-09 at 1.20.50 PM.png" data-gallery="portfolio-gallery-ai-solutions" class="glightbox">
+            <img src="portfolio/face-recognition/resized/Screenshot 2024-12-09 at 1.20.50 PM.png" class="img-fluid" alt="AI Solutions">
+            </a>
+            <div class="portfolio-info">
+            <h3>Face Recognition for Attendance</h3>
+            <p>AI Solutions</p>
             </div>
-  
-            <div class="filter" id="web-designing">
-              <div class="col-xl-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <a href="assets/images/portfolio/product-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/images/portfolio/product-2.jpg" class="img-fluid" alt=""></a>
-                </div>
-              </div>
+        </div>
+        </div>
+        
+        <div class="portfolio-item ai-solutions">
+        <div class="portfolio-wrap">
+            <a href="portfolio/ai-chatbot/resized/14293944855.jpg.thumb.jpg" data-gallery="portfolio-gallery-ai-solutions" class="glightbox">
+            <img src="portfolio/ai-chatbot/resized/14293944855.jpg.thumb.jpg" class="img-fluid" alt="AI Solutions">
+            </a>
+            <div class="portfolio-info">
+            <h3>AI-Powered Chatbot</h3>
+            <p>AI Solutions</p>
             </div>
-  
-            <div class="filter" id="surveillance-solutions">
-              <div class="col-xl-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                  <a href="assets/images/portfolio/product-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/images/portfolio/product-3.jpg" class="img-fluid" alt=""></a>
-                </div>
-              </div>
+        </div>
+        </div>
+        
+        <div class="portfolio-item surveillance-solutions">
+        <div class="portfolio-wrap">
+            <a href="portfolio/border-surveillance/resized/14293944855.jpg.thumb.jpg" data-gallery="portfolio-gallery-surveillance-solutions" class="glightbox">
+            <img src="portfolio/border-surveillance/resized/14293944855.jpg.thumb.jpg" class="img-fluid" alt="Surveillance Solutions">
+            </a>
+            <div class="portfolio-info">
+            <h3>Surveillance for Border Security</h3>
+            <p>Surveillance Solutions</p>
             </div>
+        </div>
+        </div>
+        
+        <div class="portfolio-item surveillance-solutions">
+        <div class="portfolio-wrap">
+            <a href="portfolio/maritime-surveillance/resized/14293944855.jpg.thumb.jpg" data-gallery="portfolio-gallery-surveillance-solutions" class="glightbox">
+            <img src="portfolio/maritime-surveillance/resized/14293944855.jpg.thumb.jpg" class="img-fluid" alt="Surveillance Solutions">
+            </a>
+            <div class="portfolio-info">
+            <h3>Maritime Surveillance System</h3>
+            <p>Surveillance Solutions</p>
+            </div>
+        </div>
+        </div>
+        
+        <div class="portfolio-item application-design">
+        <div class="portfolio-wrap">
+            <a href="portfolio/ecommerce-design/resized/14293944855.jpg.thumb.jpg" data-gallery="portfolio-gallery-application-design" class="glightbox">
+            <img src="portfolio/ecommerce-design/resized/14293944855.jpg.thumb.jpg" class="img-fluid" alt="Application Design">
+            </a>
+            <div class="portfolio-info">
+            <h3>E-commerce Application Design</h3>
+            <p>Application Design</p>
+            </div>
+        </div>
+        </div>
+        
+        <div class="portfolio-item application-design">
+        <div class="portfolio-wrap">
+            <a href="portfolio/healthcare-ui/resized/14293944855.jpg.thumb.jpg" data-gallery="portfolio-gallery-application-design" class="glightbox">
+            <img src="portfolio/healthcare-ui/resized/14293944855.jpg.thumb.jpg" class="img-fluid" alt="Application Design">
+            </a>
+            <div class="portfolio-info">
+            <h3>HealthCare App UI/UX</h3>
+            <p>Application Design</p>
+            </div>
+        </div>
+        </div>
+        
+        <div class="portfolio-item web-designing">
+        <div class="portfolio-wrap">
+            <a href="portfolio/corporate-website/resized/14293944855.jpg.thumb.jpg" data-gallery="portfolio-gallery-web-designing" class="glightbox">
+            <img src="portfolio/corporate-website/resized/14293944855.jpg.thumb.jpg" class="img-fluid" alt="Web Designing">
+            </a>
+            <div class="portfolio-info">
+            <h3>Corporate Website Development</h3>
+            <p>Web Designing</p>
+            </div>
+        </div>
+        </div>
+        
+        <div class="portfolio-item web-designing">
+        <div class="portfolio-wrap">
+            <a href="portfolio/creative-portfolio/resized/14293944855.jpg.thumb.jpg" data-gallery="portfolio-gallery-web-designing" class="glightbox">
+            <img src="portfolio/creative-portfolio/resized/14293944855.jpg.thumb.jpg" class="img-fluid" alt="Web Designing">
+            </a>
+            <div class="portfolio-info">
+            <h3>Portfolio Website for Creatives</h3>
+            <p>Web Designing</p>
+            </div>
+        </div>
+        </div>
+        
+        <div class="portfolio-item iot-and-smart-systems">
+        <div class="portfolio-wrap">
+            <a href="portfolio/smart-home/resized/14293944855.jpg.thumb.jpg" data-gallery="portfolio-gallery-iot-and-smart-systems" class="glightbox">
+            <img src="portfolio/smart-home/resized/14293944855.jpg.thumb.jpg" class="img-fluid" alt="IoT and Smart Systems">
+            </a>
+            <div class="portfolio-info">
+            <h3>IoT Smart Home System</h3>
+            <p>IoT and Smart Systems</p>
+            </div>
+        </div>
+        </div>
+        
+        <div class="portfolio-item iot-and-smart-systems">
+        <div class="portfolio-wrap">
+            <a href="portfolio/smart-factory/resized/14293944855.jpg.thumb.jpg" data-gallery="portfolio-gallery-iot-and-smart-systems" class="glightbox">
+            <img src="portfolio/smart-factory/resized/14293944855.jpg.thumb.jpg" class="img-fluid" alt="IoT and Smart Systems">
+            </a>
+            <div class="portfolio-info">
+            <h3>IoT Smart Factory Monitoring</h3>
+            <p>IoT and Smart Systems</p>
+            </div>
+        </div>
+        </div>
+        
           </div>
-
-
+          
         </div>
 
       </div>
     </section>
-    <!-- End Portfolio Section -->
     </div>
 
-  </main><!-- End #main -->
+  </main>
 
-  <!--  Footer  -->
-  <footer id="footer" class="footer-section">
+    <footer id="footer" class="footer-section">
     <div class="container">
-        <div class="footer-content pt-5 pb-5">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 mb-50">
-                    <div class="footer-widget">
-                        <div class="footer-logo">
-                            <a href="index.html" class="logo d-flex align-items-center">
-                              <img src="assets/images/logo.png" alt="logo">
-                            </a>
-                        </div>
-                        <div class="footer-text">
-                            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
-                            elit,Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <div class="footer-social-icon">
-                            <span>Follow us</span>
-                            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
-                      <div class="service-widget footer-widget">
-                        <div class="footer-widget-heading">
-                            <h3>Services</h3>
-                        </div>
-                          <ul class="list">
-                              <li><a href="services.html">Web Design</a></li>
-                              <li><a href="services.html">App Developemnt</a></li>
-                              <li><a href="services.html">Cloud Services</a></li>
-                              <li><a href="services.html">Domain adn Hosting</a></li>
-                              <li><a href="services.html">Seo Optimization</a></li>
-                              <li><a href="services.html">Digital Marketing</a></li>
-                              <li><a href="services.html">Search Engine</a></li>
-                              <li><a href="services.html">Domain & Hosting</a></li>
-                              <li><a href="services.html">Email Marketing</a></li>
-                              <li><a href="services.html">Digtial Marketing</a></li>
-                          </ul>
-                      </div>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
-                      <div class="service-widget footer-widget">
-                        <div class="footer-widget-heading">
-                            <h3>Information</h3>
-                        </div>
-                          <ul class="list">
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="packages.html">Pricing</a></li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="porfolio.html">Portfolio</a></li>
-                            <li><a href="faq.html">FAQs</a></li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="blogs.html">Blogs</a></li>
-                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                            <li><a href="privacy-policy.html">Terms & Conditions</a></li>
-                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                          </ul>
-                      </div>
-                  </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                    <div class="contact-widget footer-widget">
-                        <div class="footer-widget-heading">
-                            <h3>Contacts</h3>
-                        </div>
-                          <div class="footer-text">
-                              <p><i class="bi bi-geo-alt-fill mr-15"></i> 101 West Town , PBO 12345, United States</p>
-                              <p><i class="bi bi-telephone-inbound-fill mr-15"></i> +1 1234 56 789</p>
-                              <p><i class="bi bi-envelope-fill mr-15"></i> contact@example.com</p>
-                          </div>
-                    </div>
-                    <div class="footer-widget">
-                        <div class="footer-widget-heading">
-                            <h3>Newsletter</h3>
-                        </div>
-                        <div class="footer-text mb-25">
-                            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
-                        </div>
-                        <div class="subscribe-form">
-                            <form action="#">
-                                <input type="text" placeholder="Email Address">
-                                <button><i class="bi bi-telegram"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <a href="index.html" class="logo d-flex align-items-center">
+                  <img src="assets/images/Logo-new-2.png" alt="logo">
+                </a>
+              </div>
+              <div class="footer-text">
+                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec
+                  tetur adipisicing
+                  elit,Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="footer-social-icon">
+                <span>Follow us</span>
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              </div>
             </div>
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 text-left text-lg-left">
-                    <div class="copyright-text">
-                        <p>Technoit © 2023 - Designed by <a href="https://www.templatemonster.com/authors/zrthemes/">Zr Themes</a></p>
-                    </div>
-                </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+            <div class="service-widget footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Services</h3>
+              </div>
+              <ul class="list">
+                <li><a href="services.html">Web Design</a></li>
+                <li><a href="services.html">App Developemnt</a></li>
+                <li><a href="services.html">Cloud Services</a></li>
+                <li><a href="services.html">Domain adn Hosting</a></li>
+                <li><a href="services.html">Seo Optimization</a></li>
+                <li><a href="services.html">Social Media</a></li>
+              </ul>
             </div>
+          </div>
+          <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+            <div class="service-widget footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Information</h3>
+              </div>
+              <ul class="list">
+                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="packages.html">Pricing</a></li> -->
+                <!-- <li><a href="team.html">Team</a></li> -->
+                <li><a href="porfolio.html">Portfolio</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <!-- <li><a href="team.html">Team</a></li> -->
+                <li><a href="blogs.html">Blogs</a></li>
+                <!-- <li><a href="blogs-details.html">Blog Details</a></li> -->
+                <!-- <li><a href="coming-soon.html">Coming Soon</a></li> -->
+                <li><a href="privacy-policy.html">Terms & Conditions</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+            <div class="contact-widget footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Contacts</h3>
+              </div>
+              <div class="footer-text">
+                <p><i class="bi bi-geo-alt-fill mr-15"></i> 101 West Town , PBO 12345, United States</p>
+                <p><i class="bi bi-telephone-inbound-fill mr-15"></i> +1 1234 56 789</p>
+                <p><i class="bi bi-envelope-fill mr-15"></i> contact@example.com</p>
+              </div>
+            </div>
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Newsletter</h3>
+              </div>
+              <div class="footer-text mb-25">
+                <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+              </div>
+              <div class="subscribe-form">
+                <form action="#">
+                  <input type="text" placeholder="Email Address">
+                  <button><i class="bi bi-telegram"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 text-left text-lg-left">
+            <div class="copyright-text">
+              <p>Technoit © 2023 - Designed by <a href="https://www.templatemonster.com/authors/zrthemes/">Zr Themes</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
-  <!-- End Footer -->
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
     <i class="bi bi-arrow-up-short"></i>
   </a>
-
-  <div id="preloader"></div>
+  
+ <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="assets/javascripts/jquery.min.js"></script>
@@ -325,36 +443,38 @@
   <script src="assets/javascripts/script.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/javascripts/main.js"></script>
+  <script src="assets/javascripts/main.js">
+  </script>
 
-  <!-- <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Get the URL parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const filter = urlParams.get('filter') || 'all'; // Default to 'all'
-  
-    // Set active filter
-    const filters = document.querySelectorAll('.portfolio-flters li a');
-    filters.forEach(link => {
-      const linkFilter = link.getAttribute('href').split('filter=')[1];
-      if (linkFilter === filter) {
-        link.parentElement.classList.add('filter-active');
-      } else {
-        link.parentElement.classList.remove('filter-active');
-      }
+  <script>
+        document.addEventListener('DOMContentLoaded', () => {
+      // Get the URL parameter for the filter
+      const urlParams = new URLSearchParams(window.location.search);
+      const filter = urlParams.get('filter') || 'all'; // Default to 'all'
+
+      // Highlight the active filter
+      const filterLinks = document.querySelectorAll('.portfolio-flters a');
+      filterLinks.forEach(link => {
+        if (link.href.includes(`filter=${filter}`)) {
+          link.classList.add('filter-active');
+        } else {
+          link.classList.remove('filter-active');
+        }
+      });
+
+      // Show/Hide Portfolio Items
+      const portfolioItems = document.querySelectorAll('.portfolio-item');
+      portfolioItems.forEach(item => {
+        // Show all items if filter is 'all', otherwise show matching items only
+        if (filter === 'all' || item.classList.contains(filter)) {
+          item.style.display = 'block'; // Show matching items
+        } else {
+          item.style.display = 'none'; // Hide non-matching items
+        }
+      });
     });
-  
-    // Apply filtering
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    portfolioItems.forEach(item => {
-      if (filter === 'all' || item.classList.contains(`filter-${filter}`)) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
-    });
-  });
-</script>
-   -->
+  </script>
+
+
 
 </body></html>
